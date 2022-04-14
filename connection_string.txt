@@ -1,0 +1,1 @@
+Server=tcp:rev-med.database.windows.net,1433;Initial Catalog=med;Persist Security Info=False;User ID=revp2t4;Password=abCD1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
