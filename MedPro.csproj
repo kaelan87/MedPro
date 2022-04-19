@@ -21,4 +21,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="src\favicon\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\favicon\" />
+  </ItemGroup>
 </Project>

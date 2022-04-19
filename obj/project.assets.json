@@ -9654,26 +9654,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Kaelan\\.nuget\\packages\\": {}
+    "/Users/codyscholberg/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kaelan\\Documents\\.NetFullStack 03072022\\training_sessions\\project2\\MedPro\\MedPro\\MedPro.csproj",
+      "projectUniqueName": "/Users/codyscholberg/Desktop/projects/MedPro/MedPro.csproj",
       "projectName": "MedPro",
-      "projectPath": "C:\\Users\\Kaelan\\Documents\\.NetFullStack 03072022\\training_sessions\\project2\\MedPro\\MedPro\\MedPro.csproj",
-      "packagesPath": "C:\\Users\\Kaelan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kaelan\\Documents\\.NetFullStack 03072022\\training_sessions\\project2\\MedPro\\MedPro\\obj\\",
+      "projectPath": "/Users/codyscholberg/Desktop/projects/MedPro/MedPro.csproj",
+      "packagesPath": "/Users/codyscholberg/.nuget/packages/",
+      "outputPath": "/Users/codyscholberg/Desktop/projects/MedPro/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Kaelan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/codyscholberg/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -9739,7 +9737,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
       }
     }
   }
