@@ -1,7 +1,7 @@
 # Med
 Revature Project 2
 
-![medpro-logo](https://user-images.githubusercontent.com/8681966/163625212-ed8e1535-bcd3-449b-84ac-c72584795311.png)
+![medpro-logo](https://user-images.githubusercontent.com/8681966/164043700-5fa473c5-8410-4271-ae84-8744ce8ebde0.png)
 
 
 use the connection_string.txt to connect to the azure database
