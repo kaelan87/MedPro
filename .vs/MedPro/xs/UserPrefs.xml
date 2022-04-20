@@ -1,6 +1,6 @@
 ﻿<Properties StartupConfiguration="{BF4155FE-BFF9-4A0A-9584-D77BE4AA46D3}|Default">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Models/EF/medProDBContext.cs">
     <Files>
       <File FileName="angular.json" Line="26" Column="31" />
       <File FileName="src/app/log-in/log-in.component.html" Line="1" Column="1" />
@@ -8,14 +8,14 @@
       <File FileName="src/app/log-in/log-in.component.ts" Line="1" Column="1" />
       <File FileName="src/app/home/home.component.html" Line="1" Column="1" />
       <File FileName="src/index.html" Line="12" Column="38" />
-      <File FileName="src/assets/favicon/site.webmanifest" Line="1" Column="1" />
       <File FileName="src/app/about/about.component.html" Line="6" Column="6" />
       <File FileName="Models/EF/Appointment.cs" Line="8" Column="21" />
       <File FileName="Models/EF/Availability.cs" Line="1" Column="1" />
       <File FileName="Controllers/AppointmentsController.cs" Line="1" Column="1" />
-      <File FileName="Controllers/UsersController.cs" Line="24" Column="22" />
-      <File FileName="appsettings.json" Line="10" Column="1" />
-      <File FileName="Program.cs" Line="26" Column="1" />
+      <File FileName="Controllers/UsersController.cs" Line="23" Column="1" />
+      <File FileName="appsettings.json" Line="10" Column="35" />
+      <File FileName="Program.cs" Line="12" Column="322" />
+      <File FileName="Models/EF/medProDBContext.cs" Line="12" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -23,7 +23,11 @@
           <Node name="MedPro" expanded="True">
             <Node name="MedPro" expanded="True">
               <Node name="Controllers" expanded="True" />
-              <Node name="Program.cs" selected="True" />
+              <Node name="Models" expanded="True">
+                <Node name="EF" expanded="True">
+                  <Node name="medProDBContext.cs" selected="True" />
+                </Node>
+              </Node>
             </Node>
           </Node>
         </State>
@@ -33,10 +37,10 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.MedPro PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.MedPro PreferredExecutionTarget="/Applications/Safari.app" />
 </Properties>
