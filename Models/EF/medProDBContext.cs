@@ -52,18 +52,6 @@ namespace MedPro.Models.EF
 
                 entity.Property(e => e.TimeId).HasColumnName("timeId");
 
-                entity.HasOne(d => d.Doc)
-                    .WithMany(p => p.Appointments)
-                    .HasForeignKey(d => d.DocId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fk_apptDocId");
-
-                entity.HasOne(d => d.PIdNavigation)
-                    .WithMany(p => p.Appointments)
-                    .HasForeignKey(d => d.PId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fk_apptPId");
-
                 entity.HasOne(d => d.Time)
                     .WithMany(p => p.Appointments)
                     .HasForeignKey(d => d.TimeId)
@@ -84,11 +72,7 @@ namespace MedPro.Models.EF
 
                 entity.Property(e => e.TimeId).HasColumnName("timeId");
 
-                entity.HasOne(d => d.Doc)
-                    .WithMany(p => p.Availabilities)
-                    .HasForeignKey(d => d.DocId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fk_availDocId");
+               
 
                 entity.HasOne(d => d.Time)
                     .WithMany(p => p.Availabilities)
@@ -108,11 +92,7 @@ namespace MedPro.Models.EF
 
                 entity.Property(e => e.UserId).HasColumnName("userId");
 
-                entity.HasOne(d => d.User)
-                    .WithMany(p => p.Doctors)
-                    .HasForeignKey(d => d.UserId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fk_docUserId");
+               
             });
 
             modelBuilder.Entity<Doctorservice>(entity =>
@@ -128,11 +108,7 @@ namespace MedPro.Models.EF
 
                 entity.Property(e => e.SId).HasColumnName("sId");
 
-                entity.HasOne(d => d.Doc)
-                    .WithMany(p => p.Doctorservices)
-                    .HasForeignKey(d => d.DocId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fk_dsDocId");
+             
 
                 entity.HasOne(d => d.SIdNavigation)
                     .WithMany(p => p.Doctorservices)
@@ -152,11 +128,7 @@ namespace MedPro.Models.EF
 
                 entity.Property(e => e.UserId).HasColumnName("userId");
 
-                entity.HasOne(d => d.User)
-                    .WithMany(p => p.Patients)
-                    .HasForeignKey(d => d.UserId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fk_pUserId");
+                
             });
 
             modelBuilder.Entity<Service>(entity =>

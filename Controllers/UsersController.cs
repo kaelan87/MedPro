@@ -42,9 +42,27 @@ namespace MedPro.Controllers
             return user;
         }
 
-        // PUT: api/Users/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
+        [HttpGet("login/{email}/{Password}")]
+        public async Task<ActionResult<User>> GetUser(string email, string Password)
+        {
+          var id = (from u in _context.Users where u.Email == email select u.UserId).First();
+          var user = await _context.Users.FindAsync(id);
+
+          if (user == null)
+          {
+            return NotFound();
+          }
+
+          if (user.Email == email && user.Password == Password)
+          {
+            return user;
+          }
+          else return BadRequest("Wrong password, please try again");
+        }
+
+    // PUT: api/Users/5
+    // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+    [HttpPut("{id}")]
         public async Task<IActionResult> PutUser(int id, User user)
         {
             if (id != user.UserId)
