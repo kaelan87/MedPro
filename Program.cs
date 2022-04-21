@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,7 +10,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<MedPro.Models.EF.medProDBContext>(x => x.UseSqlServer("Server=tcp:p2project.database.windows.net,1433;Initial Catalog=medProDB;Persist Security Info=False;User ID=project2;Password=Password@4567;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"));
-
+builder.Services.AddCors(option =>
+{
+  option.AddDefaultPolicy(policy =>
+  {
+    policy.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod();
+  });
+});
 
 var app = builder.Build();
 
@@ -21,7 +27,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
