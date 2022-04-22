@@ -1,4 +1,4 @@
-﻿#nullable disable
+#nullable disable
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -61,7 +61,6 @@ namespace MedPro.Controllers
         }
 
     // PUT: api/Users/5
-    // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
     [HttpPut("{id}")]
         public async Task<IActionResult> PutUser(int id, User user)
         {
@@ -92,14 +91,28 @@ namespace MedPro.Controllers
         }
 
         // POST: api/Users
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<User>> PostUser(User user)
         {
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
+      if (user.Role == 1)
+      {
+        Patient patient = new Patient();
+        patient.UserId = user.UserId;
+        _context.Patients.Add(patient);
+        await _context.SaveChangesAsync();
+      }
+      else if (user.Role == 2)
+      {
+        Doctor doctor = new Doctor();
+        doctor.UserId = user.UserId;
+        _context.Doctors.Add(doctor);
+        await _context.SaveChangesAsync();
+      }
+      return CreatedAtAction("GetUser", new { id = user.UserId }, user);
+         
 
-            return CreatedAtAction("GetUser", new { id = user.UserId }, user);
         }
 
         // DELETE: api/Users/5

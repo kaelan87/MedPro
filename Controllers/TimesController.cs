@@ -1,4 +1,4 @@
-﻿#nullable disable
+#nullable disable
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,7 +43,6 @@ namespace MedPro.Controllers
         }
 
         // PUT: api/Times/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutTime(int id, Time time)
         {
@@ -74,7 +73,6 @@ namespace MedPro.Controllers
         }
 
         // POST: api/Times
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Time>> PostTime(Time time)
         {
